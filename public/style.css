@@ -6,9 +6,9 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1a0033 0%, #0d0015 50%, #000000 100%);
   min-height: 100vh;
-  color: #333;
+  color: #e0e0e0;
 }
 
 .container {
@@ -35,23 +35,25 @@ body {
 }
 
 .auth-box {
-  background: white;
+  background: linear-gradient(135deg, #1a0033 0%, #2d0052 100%);
   border-radius: 15px;
   padding: 40px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(138, 43, 226, 0.3);
   width: 100%;
   max-width: 400px;
+  border: 2px solid #7c3aed;
 }
 
 .auth-box h1 {
   text-align: center;
   margin-bottom: 10px;
-  color: #667eea;
+  color: #a855f7;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
 }
 
 .auth-box p {
   text-align: center;
-  color: #666;
+  color: #b0b0b0;
   margin-bottom: 30px;
 }
 
@@ -64,17 +66,25 @@ body {
 .tab-btn {
   flex: 1;
   padding: 10px;
-  border: none;
-  background: #f0f0f0;
+  border: 2px solid #4c1d95;
+  background: #0d0015;
   cursor: pointer;
   border-radius: 8px;
   font-weight: 600;
+  color: #a0aec0;
   transition: all 0.3s;
 }
 
 .tab-btn.active {
-  background: #667eea;
+  background: #7c3aed;
   color: white;
+  border-color: #a855f7;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
+}
+
+.tab-btn:hover {
+  border-color: #a855f7;
+  color: #a855f7;
 }
 
 .tab-content {
@@ -89,15 +99,23 @@ body {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
-  border: 2px solid #e0e0e0;
+  border: 2px solid #4c1d95;
+  background: #0d0015;
   border-radius: 8px;
   font-size: 14px;
-  transition: border-color 0.3s;
+  color: #e0e0e0;
+  transition: all 0.3s;
 }
 
 .input:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #a855f7;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+  background: #1a0033;
+}
+
+.input::placeholder {
+  color: #666;
 }
 
 .btn {
@@ -112,31 +130,35 @@ body {
 }
 
 .btn-primary {
-  background: #667eea;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
   color: white;
+  border: 2px solid #a855f7;
 }
 
 .btn-primary:hover {
-  background: #5568d3;
+  background: linear-gradient(135deg, #a855f7 0%, #d946ef 100%);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 5px 20px rgba(168, 85, 247, 0.5);
 }
 
 .btn-danger {
-  background: #ff6b6b;
-  color: white;
+  background: #7c2d12;
+  color: #fca5a5;
+  border: 2px solid #ea580c;
 }
 
 .btn-danger:hover {
-  background: #ee5a52;
+  background: #b45309;
+  color: white;
 }
 
 /* ===== DASHBOARD ===== */
 .navbar {
-  background: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #1a0033 0%, #2d0052 100%);
+  box-shadow: 0 2px 20px rgba(168, 85, 247, 0.2);
   padding: 20px 0;
   margin-bottom: 30px;
+  border-bottom: 2px solid #7c3aed;
 }
 
 .navbar .container {
@@ -146,7 +168,8 @@ body {
 }
 
 .navbar h2 {
-  color: #667eea;
+  color: #a855f7;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
 }
 
 .navbar div {
@@ -156,7 +179,7 @@ body {
 }
 
 #userDisplay {
-  color: #666;
+  color: #b0b0b0;
   font-weight: 600;
 }
 
@@ -175,30 +198,33 @@ body {
 
 .sidebar-btn {
   padding: 15px;
-  background: white;
-  border: 2px solid transparent;
+  background: linear-gradient(135deg, #1a0033 0%, #2d0052 100%);
+  border: 2px solid #4c1d95;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s;
-  color: #666;
+  color: #a0aec0;
 }
 
 .sidebar-btn.active {
-  background: #667eea;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
   color: white;
-  border-color: #667eea;
+  border-color: #a855f7;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
 }
 
 .sidebar-btn:hover {
-  border-color: #667eea;
+  border-color: #a855f7;
+  color: #a855f7;
 }
 
 .content {
-  background: white;
+  background: linear-gradient(135deg, #1a0033 0%, #2d0052 100%);
   border-radius: 15px;
   padding: 30px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 30px rgba(138, 43, 226, 0.2);
+  border: 2px solid #7c3aed;
 }
 
 .section {
@@ -210,23 +236,25 @@ body {
 }
 
 .section h2 {
-  color: #667eea;
+  color: #a855f7;
   margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
 }
 
 .add-bot-box,
 .add-command-box {
-  background: #f8f9fa;
+  background: linear-gradient(135deg, #0d0015 0%, #1a0033 100%);
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 30px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid #a855f7;
+  border: 2px solid #4c1d95;
 }
 
 .add-bot-box h3,
 .add-command-box h3 {
   margin-bottom: 15px;
-  color: #333;
+  color: #a855f7;
 }
 
 .bots-list,
@@ -237,13 +265,21 @@ body {
 
 .bot-card,
 .command-card {
-  background: #f8f9fa;
+  background: linear-gradient(135deg, #1a0033 0%, #2d0052 100%);
   padding: 20px;
   border-radius: 10px;
-  border-left: 4px solid #667eea;
+  border-left: 4px solid #a855f7;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 2px solid #4c1d95;
+  transition: all 0.3s;
+}
+
+.bot-card:hover,
+.command-card:hover {
+  border-color: #a855f7;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
 }
 
 .bot-info,
@@ -253,8 +289,18 @@ body {
 
 .bot-info h3,
 .command-info h3 {
-  color: #333;
+  color: #a855f7;
   margin-bottom: 5px;
+}
+
+.bot-info p,
+.command-info p {
+  color: #b0b0b0;
+}
+
+.bot-info small,
+.command-info small {
+  color: #808080;
 }
 
 .bot-status {
@@ -267,13 +313,13 @@ body {
 }
 
 .status-online {
-  background: #d4edda;
-  color: #155724;
+  background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+  color: #86efac;
 }
 
 .status-offline {
-  background: #f8d7da;
-  color: #721c24;
+  background: linear-gradient(135deg, #7c2d12 0%, #b45309 100%);
+  color: #fca5a5;
 }
 
 .bot-actions,
@@ -283,17 +329,21 @@ body {
 }
 
 .btn-delete {
-  background: #ff6b6b;
-  color: white;
+  background: linear-gradient(135deg, #7c2d12 0%, #b45309 100%);
+  color: #fca5a5;
   padding: 8px 15px;
-  border: none;
+  border: 2px solid #ea580c;
   border-radius: 5px;
   cursor: pointer;
   font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s;
 }
 
 .btn-delete:hover {
-  background: #ee5a52;
+  background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+  color: white;
+  box-shadow: 0 0 10px rgba(234, 88, 12, 0.5);
 }
 
 .select-bot {
@@ -304,16 +354,29 @@ body {
   display: block;
   margin-bottom: 10px;
   font-weight: 600;
-  color: #333;
+  color: #a855f7;
 }
 
 select.input {
   width: 100%;
   padding: 12px;
-  border: 2px solid #e0e0e0;
+  border: 2px solid #4c1d95;
+  background: #0d0015;
   border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
+  color: #e0e0e0;
+}
+
+select.input:focus {
+  outline: none;
+  border-color: #a855f7;
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.3);
+}
+
+select.input option {
+  background: #1a0033;
+  color: #e0e0e0;
 }
 
 /* ===== RESPONSIVO ===== */
@@ -357,4 +420,22 @@ select.input {
 
 .section.active {
   animation: slideIn 0.3s ease;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0015;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7c3aed;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a855f7;
 }
