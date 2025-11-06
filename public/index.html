@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot Hosting Platform - Hospedagem Gratuita de Bots Discord</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Tela de Login/Registro -->
+    <div id="authScreen" class="screen">
+      <div class="container">
+        <div class="auth-box">
+          <h1>🤖 Bot Hosting Platform</h1>
+          <p>Hospedagem gratuita de bots Discord 24/7</p>
+
+          <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('login')">Login</button>
+            <button class="tab-btn" onclick="switchTab('register')">Registrar</button>
+          </div>
+
+          <!-- Login -->
+          <div id="loginTab" class="tab-content active">
+            <input type="email" id="loginEmail" placeholder="Email" class="input">
+            <input type="password" id="loginPassword" placeholder="Senha" class="input">
+            <button onclick="login()" class="btn btn-primary">Entrar</button>
+          </div>
+
+          <!-- Registro -->
+          <div id="registerTab" class="tab-content">
+            <input type="text" id="registerUsername" placeholder="Nome de usuário" class="input">
+            <input type="email" id="registerEmail" placeholder="Email" class="input">
+            <input type="password" id="registerPassword" placeholder="Senha" class="input">
+            <button onclick="register()" class="btn btn-primary">Criar Conta</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboardScreen" class="screen hidden">
+      <nav class="navbar">
+        <div class="container">
+          <h2>🤖 Bot Hosting</h2>
+          <div>
+            <span id="userDisplay"></span>
+            <button onclick="logout()" class="btn btn-danger">Sair</button>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container dashboard-container">
+        <div class="sidebar">
+          <button class="sidebar-btn active" onclick="switchDashboard('bots')">Meus Bots</button>
+          <button class="sidebar-btn" onclick="switchDashboard('commands')">Comandos</button>
+        </div>
+
+        <div class="content">
+          <!-- Seção de Bots -->
+          <div id="botsSection" class="section active">
+            <h2>Meus Bots</h2>
+            
+            <div class="add-bot-box">
+              <h3>Adicionar Novo Bot</h3>
+              <input type="text" id="botName" placeholder="Nome do bot" class="input">
+              <input type="text" id="botToken" placeholder="Token do bot Discord" class="input">
+              <button onclick="addBot()" class="btn btn-primary">Adicionar Bot</button>
+            </div>
+
+            <div id="botsList" class="bots-list">
+              <p>Carregando bots...</p>
+            </div>
+          </div>
+
+          <!-- Seção de Comandos -->
+          <div id="commandsSection" class="section">
+            <h2>Gerenciar Comandos</h2>
+            
+            <div class="select-bot">
+              <label>Selecione um bot:</label>
+              <select id="botSelect" onchange="loadCommands()" class="input">
+                <option value="">-- Escolha um bot --</option>
+              </select>
+            </div>
+
+            <div id="commandsContent" style="display: none;">
+              <div class="add-command-box">
+                <h3>Criar Novo Comando</h3>
+                <input type="text" id="commandName" placeholder="Nome do comando (ex: ping)" class="input">
+                <textarea id="commandResponse" placeholder="Resposta do comando" class="input" rows="3"></textarea>
+                <input type="number" id="commandCooldown" placeholder="Cooldown (segundos)" class="input" value="3">
+                <button onclick="addCommand()" class="btn btn-primary">Criar Comando</button>
+              </div>
+
+              <div id="commandsList" class="commands-list">
+                <p>Carregando comandos...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

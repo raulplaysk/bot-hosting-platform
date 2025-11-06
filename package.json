@@ -1,0 +1,22 @@
+{
+  "name": "bot-hosting-platform",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["discord", "bot", "hosting"],
+  "author": "Bot Hosting",
+  "license": "MIT",
+  "description": "Plataforma de hospedagem de bots Discord gratuita 24/7",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "discord.js": "^14.24.2",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "sqlite3": "^5.1.7"
+  }
+}
